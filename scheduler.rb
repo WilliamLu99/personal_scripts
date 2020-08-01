@@ -82,5 +82,8 @@ tasks = [
   ),
 ]
 
-schedule = Schedule.new(tasks: tasks, hour: ARGV[0], min: ARGV[1])
+hour = ARGV[0] || 0
+min = ARGV[1] || 0
+
+schedule = Schedule.new(tasks: tasks, hour: hour, min: min)
 schedule.print
